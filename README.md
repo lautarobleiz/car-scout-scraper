@@ -63,7 +63,7 @@ Esto ejecuta el scraper de Autocosmos, guarda los resultados en `car_scout.db` (
 - **`autos`** — datos fijos de cada publicación (marca, modelo, año, km, ubicación, fuente, etc.), con restricción `UNIQUE(fuente, id_externo)` para evitar duplicados en corridas sucesivas
 - **`precios_historicos`** — un registro nuevo por cada vez que se detecta el precio de un auto, para mantener un historial de precios en el tiempo
 
-## 🏗️ Arquitectura
+## Arquitectura
 
 - **Patrón adapter**: cada fuente normaliza sus datos a un formato canónico común antes de guardarlos, independientemente de si el origen es scraping o una API
 - **Verificación diferida**: en vez de re-scrapear toda la base constantemente, se verifica la disponibilidad de una publicación solo cuando un usuario la consulta activamente
